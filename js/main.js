@@ -193,6 +193,7 @@ fetch("https://api.meteo-concept.com/api/forecast/daily/0?token=a352bbb36f25dcdd
   var tempMin = data.forecast.tmin;
   var tempMax = data.forecast.tmax;
   var weather = data.forecast.weather;
+  var h = data.forecast.datetime;
 
   var convertWeatherCode = wheatherCode[weather];
 
@@ -204,6 +205,6 @@ fetch("https://api.meteo-concept.com/api/forecast/daily/0?token=a352bbb36f25dcdd
   title.innerHTML = city;
   w.innerHTML = "Temps: " + convertWeatherCode;
   maxt.innerHTML = "Plus haute Temperature: " + tempMax + " degrés";
-  mint.innerHTML = "Plus basse Temperature: " + tempMin + " degrés";
+  mint.innerHTML = h;
 
 });
